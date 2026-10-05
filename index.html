@@ -559,7 +559,7 @@ function doLogin(){
   const email = document.getElementById('login-email').value.trim();
   const pass  = document.getElementById('login-pass').value.trim();
   const emp = DB.employees.find(e=>e.email===email && e.pass===pass);
-  if(!emp){ alert('Invalid credentials. Try admin@rsi.com / admin123'); return; }
+  if(!emp){ alert('Invalid credentials. Please check your email and password.'); return; }
   STATE.user = emp;
   document.getElementById('login-screen').style.display='none';
   document.getElementById('app').style.display='flex';
@@ -2472,7 +2472,7 @@ document.getElementById('page-content').addEventListener('click',function(){
   }
 });
 console.log('🏭 RSI Precision Quality Machining System loaded.');
-console.log('Demo: admin@rsi.com / admin123');
+console.log('RSI Precision Quality Machining System ready.');
 </script>
 </body>
 </html>
